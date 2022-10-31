@@ -1,0 +1,4 @@
+jupyterlab
+notebook
+ffmpeg
+opencv-python

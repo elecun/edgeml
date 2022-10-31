@@ -1,0 +1,6 @@
+jupyterlab
+notebook
+pandas
+matplotlib
+xlrd
+sklearn
