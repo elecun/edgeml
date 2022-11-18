@@ -3,5 +3,7 @@ notebook
 pandas
 matplotlib
 xlrd
-sklearn
+scikit-learn
 openpyxl
+xgboost
+ipykernel
