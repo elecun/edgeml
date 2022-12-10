@@ -99,7 +99,7 @@ model.compile(optimizer='adam', loss='mse')
 plot_model(model, 'autoencoder.png', show_shapes=True)
 
 # fit the autoencoder model to reconstruct input
-history = model.fit(X_train_scaled, X_train_scaled, epochs=400, batch_size=16, verbose=2, validation_data=(X_test_scaled, X_test_scaled))
+history = model.fit(X_train_scaled, X_train_scaled, epochs=200, batch_size=16, verbose=2, validation_data=(X_test_scaled, X_test_scaled))
 
 # plot loss
 pyplot.plot(history.history['loss'], label='train')
