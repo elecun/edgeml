@@ -96,7 +96,7 @@ model = Model(inputs=visible, outputs=output)
 model.compile(optimizer='adam', loss='mse')
 
 # plot the autoencoder
-plot_model(model, 'autoencoder.png', show_shapes=True)
+# plot_model(model, 'autoencoder.png', show_shapes=True)
 
 # fit the autoencoder model to reconstruct input
 history = model.fit(X_train_scaled, X_train_scaled, epochs=200, batch_size=16, verbose=2, validation_data=(X_test_scaled, X_test_scaled))
@@ -109,7 +109,7 @@ pyplot.show()
 
 # define an encoder model (without the decoder)
 encoder = Model(inputs=visible, outputs=bottleneck)
-plot_model(encoder, 'encoder.png', show_shapes=True)
+# plot_model(encoder, 'encoder.png', show_shapes=True)
 
 # reshape target variables so that we can transform them 
 y_train = y_train.reshape((len(y_train), 1)) 
@@ -159,14 +159,14 @@ print("R-squared : ", r2)
 
 pyplot.clf()
 
-pyplot.plot(y_test, 'bo', label="Real")
-pyplot.plot(yhat, 'ro', label="Predicted")
-pyplot.legend(loc='upper right')
-pyplot.savefig("result.png")
+# pyplot.plot(y_test, 'bo', label="Real")
+# pyplot.plot(yhat, 'ro', label="Predicted")
+# pyplot.legend(loc='upper right')
+# pyplot.savefig("result.png")
 
-pyplot.clf()
+# pyplot.clf()
 
-pyplot.plot(y_test, yhat, 'bo')
-pyplot.xlabel("test")
-pyplot.ylabel("predicted")
-pyplot.savefig("corr.png")
+# pyplot.plot(y_test, yhat, 'bo')
+# pyplot.xlabel("test")
+# pyplot.ylabel("predicted")
+# pyplot.savefig("corr.png")
