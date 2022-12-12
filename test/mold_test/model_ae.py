@@ -97,6 +97,7 @@ model.compile(optimizer='adam', loss='mse')
 
 # plot the autoencoder
 # plot_model(model, 'autoencoder.png', show_shapes=True)
+model.save('model.h5')
 
 # fit the autoencoder model to reconstruct input
 history = model.fit(X_train_scaled, X_train_scaled, epochs=200, batch_size=16, verbose=2, validation_data=(X_test_scaled, X_test_scaled))
